@@ -9,16 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/core": "7.1.1",
+    "@mantine/hooks": "7.1.1",
+    "@tabler/icons-react": "^2.38.0",
+    "autoprefixer": "^10.4.16",
+    "next": "latest",
+    "postcss": "^8.4.31",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "typescript": "latest"
   }
 }
