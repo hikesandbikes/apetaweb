@@ -3,11 +3,12 @@
 import {
   IconVolumeOff,
   IconVolume,
-  IconHeart,
-  IconMessageCircle2,
+  IconHeartFilled,
+  IconMessageCircle2Filled,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { FullPost } from "./Post";
+import Link from "next/link";
 
 export const RightSection = ({
   post,
@@ -48,14 +49,18 @@ export const RightSection = ({
         width={40}
         height={40}
       /> */}
-      <div className="flex flex-col items-center">
-        <IconHeart size={32} color="white" />
-        <p className="text-white">{post.likeCount}</p>
-      </div>
-      <div className="flex flex-col items-center">
-        <IconMessageCircle2 size={32} color="white" />
-        <p className="text-white">{post.feedbackCount}</p>
-      </div>
+      <Link href="https://apps.apple.com/app/6461686797">
+        <div className="flex flex-col items-center text-white">
+          <IconHeartFilled size={32} color="white" />
+          <p className="text-white">{post.likeCount}</p>
+        </div>
+      </Link>
+      <Link href="https://apps.apple.com/app/6461686797">
+        <div className="flex flex-col items-center text-white">
+          <IconMessageCircle2Filled size={32} color="white" />
+          <p className="text-white">{post.feedbackCount}</p>
+        </div>
+      </Link>
     </div>
   );
 };

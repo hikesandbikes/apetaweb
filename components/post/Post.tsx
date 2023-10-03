@@ -85,45 +85,54 @@ export default function Post({ post }: { post: FullPost }) {
           controls={false}
           playsInline
         />
-        {isPaused && <PauseButton />}
+        {isPaused && (
+          <PauseButton
+            onClick={() => {
+              setIsPaused(false);
+              videoRef.current?.play();
+            }}
+          />
+        )}
       </div>
     </div>
   );
 }
 
-const PauseButton = () => {
+const PauseButton = ({ onClick }: { onClick?: () => void }) => {
   return (
-    <svg
-      color="white"
-      style={{
-        zIndex: 100,
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
-      xmlns="http://www.w3.org/2000/svg"
-      className="icon icon-tabler icon-tabler-player-pause-filled"
-      width="100"
-      height="100"
-      viewBox="0 0 24 24"
-      strokeWidth="1"
-      stroke="currentColor"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path
-        d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
-        strokeWidth="0"
-        fill="currentColor"
-      ></path>
-      <path
-        d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
-        strokeWidth="0"
-        fill="currentColor"
-      ></path>
-    </svg>
+    <button onClick={onClick}>
+      <svg
+        color="white"
+        style={{
+          zIndex: 100,
+          position: "absolute",
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+        xmlns="http://www.w3.org/2000/svg"
+        className="icon icon-tabler icon-tabler-player-pause-filled"
+        width="100"
+        height="100"
+        viewBox="0 0 24 24"
+        strokeWidth="1"
+        stroke="currentColor"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
+          strokeWidth="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
+          strokeWidth="0"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </button>
   );
 };
