@@ -1,0 +1,31 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "23NAG6FCYU.com.apeta.app"
+        ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all routes"
+          },
+          {
+            "/": "/post/*",
+            "comment": "Matches any route starting with /post/"
+          }
+        ]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "23NAG6FCYU.com.apeta.app"
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "23NAG6FCYU.com.apeta.app"
+    ]
+  }
+}
