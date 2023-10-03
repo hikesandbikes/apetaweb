@@ -22,7 +22,7 @@ export const RightSection = ({
     <div className="flex flex-col items-center justify-center space-y-3">
       {isMuted ? (
         <button
-          className="bg-transparent mb-4"
+          className="bg-transparent mb-4 text-white"
           onClick={(e) => {
             e.stopPropagation();
             setIsMuted(false);
@@ -32,7 +32,7 @@ export const RightSection = ({
         </button>
       ) : (
         <button
-          className="bg-transparent"
+          className="bg-transparent mb-4 text-white"
           onClick={(e) => {
             e.stopPropagation();
             setIsMuted(true);
