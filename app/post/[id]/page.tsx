@@ -2,7 +2,7 @@ import Post from "@/components/post/Post";
 import { Metadata } from "next";
 
 async function GetFullPost(id: string) {
-  const res = await fetch(`https://apeta-server.fly.dev/post/${id}`);
+  const res = await fetch(`https://apeta-server-prod.fly.dev/post/${id}`);
   const { post } = await res.json();
   return post;
 }
