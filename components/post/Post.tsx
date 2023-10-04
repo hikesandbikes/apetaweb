@@ -3,7 +3,6 @@ import Image from "next/image";
 
 import { useRef, useState } from "react";
 import { OverlayedElements } from "./OverlayedElements";
-import { Metadata } from "next";
 export type FullPost = {
   mediaUrl: string;
   author: {

@@ -27,13 +27,6 @@ export async function generateMetadata({
           alt: post.content,
         },
       ],
-      videos: [
-        {
-          url: post.mediaUrl,
-          width: 1920,
-          height: 1080,
-        },
-      ],
     },
   };
 }
