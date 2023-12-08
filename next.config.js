@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["apeta-dev.s3.us-east-1.amazonaws.com"],
+    domains: ["apetaprod.s3.amazonaws.com", "d1py2juj0d9vsg.cloudfront.net"],
   },
 };
 

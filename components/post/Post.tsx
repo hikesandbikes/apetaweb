@@ -80,7 +80,10 @@ export default function Post({ post }: { post: FullPost }) {
           loop
           muted={isMuted}
           style={{ maxWidth: "100%", maxHeight: "100%", zIndex: 1 }}
-          src={post.mediaUrl}
+          src={post.mediaUrl.replace(
+            "apeta-prod.s3.us-east-1.amazonaws.com/",
+            "d1py2juj0d9vsg.cloudfront.net/"
+          )}
           controls={false}
           playsInline
         />
